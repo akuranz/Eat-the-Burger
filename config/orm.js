@@ -10,9 +10,17 @@ var orm = {
       }
       cb(result);
     });
-  },
-  insertOne: function() {},
-  updateOne: function() {}
+  }
+  //   insertOne: function(table) {
+  //     var queryString = `INSERT INTO ?? SET ? = ?`;
+  //     connection.query(queryString, [table], function(err, result) {
+  //       if (err) {
+  //         throw err;
+  //       }
+  //       cd(result);
+  //     });
+  //   },
+  //   updateOne: function() {}
 };
 
 // Export the orm object for the model.
