@@ -6,7 +6,10 @@ $(function() {
     var newBurger = {
       name: $("#newBurgerName")
         .val()
-        .trim()
+        .trim(),
+      devoured: 0
+      //   $("#newBurgerName").attr("devoured")
+      //   $("#newBurgerName").data("devoured")
     };
 
     // Send the POST request.
@@ -17,6 +20,28 @@ $(function() {
       console.log("created new burger");
       // Reload the page to get the updated list
       location.reload();
+    });
+  });
+
+  $(function() {
+    $(".change-devoured").on("click", function(event) {
+      event.preventDefault();
+      var id = $(this).data("id");
+      var newDevoured = $(this).data("devoured");
+
+      var newDevouredState = {
+        devoured: newDevoured
+      };
+
+      // Send the PUT request.
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: newDevouredState
+      }).then(function() {
+        console.log("changed devoured to", newDevoured);
+        // Reload the page to get the updated list
+        location.reload();
+      });
     });
   });
 });

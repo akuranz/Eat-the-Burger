@@ -1,31 +1,37 @@
 <h1>Eat-da-burger</h1>
 
-<h2>Burgers you want to eat</h2>
+<img src="../public/assets/images/hamburger_53876-25481.jpg" alt="hamburger">
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-    {{/each}}
-</ul>
+<h2>A list of burgers you want to devour:</h2>
 
-<h2>Burgers you ate</h2>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/if}}
-    {{/each}}
-</ul>
+{{#each burgers}}
+
+{{#unless devoured}}
+{{> burgers/burger-block devoured=0}}
+{{/unless}}
+
+{{/each}}
+
+
+<h2>A list of burgers you have devoured:</h2>
+
+{{#each burgers}}
+{{#if devoured}}
+{{> burgers/burger-block devoured=1}}
+{{/if}}
+{{/each}}
+
+
+<hr>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
 
     <div class="form-group">
-        <label for="newBurgerName">Burger Name:</label>
-        <input type="text" id="newBurgerName" name="name">
+        {{!-- <label for="newBurgerName">Burger Name:</label> --}}
+        <input type="textarea" id="newBurgerName" name="name" data-devoured="false">
     </div>
 
-    <button type="submit">Add Burger</button>
+    <button type="submit"><i class="fas fa-plus"></i> Add Burger</button>
 </form>
+<p>Add the name of a burger you'd like to eat and click the "submit" button!</p>
