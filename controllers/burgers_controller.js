@@ -13,15 +13,16 @@ router.get("/", function(req, res) {
   });
 });
 
-// router.post("/api/burgers", function(req, res) {
-//   burger.create(
-//     ["burger_name", "devour"],
-//     [req.body.name, req.body.devour],
-//     function(result) {
-//       // Send back the ID of the new quote
-//       res.json({ id: result.insertId });
-//     }
-//   );
-// });
+router.post("/api/burgers", function(req, res) {
+  burger.insertOne(
+    ["burger_name", "devoured"],
+    [req.body.name, req.body.devour],
+    function(result) {
+      // Send back the ID of the new burger
+      res.json({ id: result.insertId });
+    }
+  );
+  console.log(req.body);
+});
 
 module.exports = router;
