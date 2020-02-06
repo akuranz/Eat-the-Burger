@@ -5,11 +5,9 @@
 <h2>A list of burgers you want to devour:</h2>
 
 {{#each burgers}}
-
 {{#unless devoured}}
-{{> burgers/burger-block devoured=0}}
+{{> burgers/burger-block devoured=false}}
 {{/unless}}
-
 {{/each}}
 
 
@@ -17,7 +15,7 @@
 
 {{#each burgers}}
 {{#if devoured}}
-{{> burgers/burger-block devoured=1}}
+{{> burgers/burger-block devoured=true}}
 {{/if}}
 {{/each}}
 
