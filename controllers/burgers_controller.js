@@ -33,7 +33,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   burger.updateOne(
     {
-      devoured: !req.body.devoured
+      devoured: req.body.devoured !== "true"
     },
     condition,
     function(result) {
