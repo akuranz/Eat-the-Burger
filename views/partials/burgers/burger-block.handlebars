@@ -2,6 +2,6 @@
     <div class="burger-name">{{burger_name}}</div>
 
     <button data-burgerid="{{id}}" class="change-devoured" data-devoured="{{devoured}}"><i class="fas fa-hamburger"></i>
-        DEVOUR >> </button>
+        {{#if devoured}}RETURN TO LIST >>{{else}} DEVOUR >>{{/if}} </button>
 
 </p>
