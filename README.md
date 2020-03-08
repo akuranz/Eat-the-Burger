@@ -22,7 +22,7 @@ This app uses Handlebars to create an HTML templates for the main page and each 
 
 ## Javascript
 
-JQuery is used on the front end to make several AJAX calls to post to and update the database when a new burger is created or the devoured status is updated.
+JQuery is used on the front end to make several AJAX calls to post to and update the database when a new git adburger is created or the devoured status is updated.
 
 ## Node Packages
 
