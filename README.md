@@ -1,8 +1,8 @@
-# burgers
+# Eat-the-Burger
 
 ## Deployed Dashboard
 
-https://github.com/akuranz/Employee-Tracker
+https://github.com/akuranz/Eat-the-Burger
 
 ## Deployed Project
 
